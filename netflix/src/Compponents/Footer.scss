@@ -1,0 +1,82 @@
+@import "../App.scss";
+.footer {
+  margin-top: 10px;
+  height: 250px;
+  background-color: rgba(0, 0, 0, 0.571);
+  padding: 20px;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    .footer-left {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      @include mobile {
+        flex-direction: column;
+      }
+      img {
+        height: 50px;
+      }
+      .quickLinks {
+        margin-top: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include mobile {
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-size: 30px;
+          margin-bottom: 50px;
+          @include mobile {
+            margin-bottom: 20px;
+          }
+        }
+        ul {
+          list-style: none;
+          li {
+            margin-bottom: 5px;
+            display: inline;
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+    .footer-right {
+      flex: 1;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      @include mobile {
+        flex-direction: column;
+      }
+      .info {
+        margin-bottom: 25px;
+      }
+      span {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        @include mobile {
+          margin-top: -10px;
+        }
+      }
+
+      img {
+        object-fit: fill;
+        height: 100px;
+        width: 60%;
+      }
+    }
+  }
+}
